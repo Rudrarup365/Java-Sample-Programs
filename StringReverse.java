@@ -6,7 +6,7 @@ public class StringReverse {
 		String a="Terra firma";
 		System.out.println(reverse(a));
 	}
-public static String reverse(String in) {
+	public static String reverse(String in) {
 		if (in==null) {
 			throw new IllegalArgumentException ("Null is not validinput");
 		}
@@ -16,5 +16,5 @@ public static String reverse(String in) {
 			out.append(chars[i]);
 		}
 		return out.toString();
-}
+	}
 }
