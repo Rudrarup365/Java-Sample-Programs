@@ -1,4 +1,4 @@
-package javapackage;
+package JavaPackage;
 
 public class PrimeNumber {
 
