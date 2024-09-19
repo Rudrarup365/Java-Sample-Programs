@@ -6,7 +6,7 @@ public class CalendarCreate {
 	public static void main(String[] args) {
         // Set the year and month you want to display the calendar for
         int year = 2024;
-        int month = 9;  // September (0-based, 0 = January, 11 = December)
+        int month = 9;  // September (1 = January, 12 = December)
 
         // Create a calendar instance and set it to the first day of the given month and year
         Calendar calendar = Calendar.getInstance();
