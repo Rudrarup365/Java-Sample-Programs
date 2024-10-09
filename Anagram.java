@@ -8,7 +8,7 @@ public class Anagram {
 	
 
 	}
-	public static boolean isAnagram(String a, String b){
+	private static boolean isAnagram(String a, String b){
 		boolean anagram=true;
 		int[] counter=new int[26];
 		for (int i=0;i<counter.length;i++) {
