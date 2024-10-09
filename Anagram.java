@@ -3,8 +3,12 @@ package testing;
 public class Anagram {
 
 	public static void main(String[] args) {
-		String a ="cork";
-		String b ="rock";
+		System.out.println(isAnagram("cork","rock"));
+		System.out.println(isAnagram("cat","mat"));
+	
+
+	}
+	public static boolean isAnagram(String a, String b){
 		boolean anagram=true;
 		int[] counter=new int[26];
 		for (int i=0;i<counter.length;i++) {
@@ -21,13 +25,7 @@ public class Anagram {
 				anagram=false;
 			}
 		}
-		if (anagram) {
-			System.out.println("anagram");
-		}
-		else {
-			System.out.println("not anagram");
-		}
-
+		return anagram;
 	}
 
 }
