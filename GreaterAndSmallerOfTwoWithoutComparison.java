@@ -12,7 +12,7 @@ public class GreaterAndSmallerOfTwoWithoutComparison {
 		return ((Math.abs(a-b)+(a+b))/2);
 	}
 	static int smaller(int a, int b) {
-		return (int) ((a+b-Math.sqrt((a-b)*(a-b)))/2);
+		return (int) ((a+b-(a-b))/2);
 	}
 
 }
