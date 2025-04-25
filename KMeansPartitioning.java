@@ -46,6 +46,11 @@ public class KMeansPartitioning {
         Point toPoint() {
             return new Point(x, y);
         }
+
+        @Override
+        public String toString() {
+            return "(" + String.format("%.2f", x) + ", " + String.format("%.2f", y) + ")";
+        }
     }
 
     public static void kMeans(List<Point> points, int k, int maxIterations) {
@@ -90,28 +95,33 @@ public class KMeansPartitioning {
             }
 
             if (!changed) {
-                System.out.println("Converged after " + (iteration + 1) + " iterations.");
+                System.out.println("Converged after " + (iteration + 1) + " iterations.\n");
                 break;
             }
+        }
+
+        // Display results
+        System.out.println("Final Clustering:");
+        for (Point point : points) {
+            System.out.println(point);
+        }
+
+        System.out.println("\nCluster Means:");
+        for (int i = 0; i < centroids.size(); i++) {
+            System.out.println("Cluster " + i + " Mean: " + centroids.get(i));
         }
     }
 
     public static void main(String[] args) {
-        // Sample dataset
         List<Point> points = Arrays.asList(
                 new Point(1, 2), new Point(2, 3), new Point(3, 3),
                 new Point(8, 7), new Point(8, 8), new Point(7, 7),
                 new Point(10, 10), new Point(9, 11), new Point(11, 9)
         );
 
-        int k = 5; // Number of clusters
+        int k = 3; // Number of clusters
         int maxIterations = 100;
 
         kMeans(points, k, maxIterations);
-
-        System.out.println("\nFinal Clustering:");
-        for (Point point : points) {
-            System.out.println(point);
-        }
     }
 }
